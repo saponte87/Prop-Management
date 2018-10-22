@@ -1,0 +1,14 @@
+.header-wrapper {
+
+    display: grid;
+    grid-template-columns:  [s] 1fr [e];
+
+    grid-template-rows: 30px 20px;
+
+    &__title {
+
+    }
+    &__subtitle {
+
+    }
+}
