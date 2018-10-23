@@ -33,8 +33,11 @@ class SigninForm extends Component {
           title="Login"
           component={FormButton}
         />
-        <TextLink to='/forgot' text='Forgot Password'/>
-        <TextLink to='/signup' text='Not a member? Register here'/>
+        <div className='sign-in-form__text-links'>
+            <TextLink to='/forgot' text='Forgot Password'/>
+            <TextLink to='/signup' text='Not a member? Register here'/>
+        </div>
+        
       </form>
     );
   }
