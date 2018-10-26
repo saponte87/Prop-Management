@@ -11,19 +11,18 @@ const createStoreWithMiddleware = applyMiddleware(reduxThunk)(compose((window.de
 // import 'bootstrap/dist/css/bootstrap.css';
 import './style/main.scss';
 
+import history from './history';
+
 import Layout from './components/layout';
 
+// AUTH
 import requireAuth from './components/requireAuth';
 import Signup from './components/auth/signup';
 import Signin from './components/auth/signin';
 
-import history from './history';
-
-//DASHBOARD
+// DASHBOARD
 import Dashboard from './components/dashboard';
-
-import TabNav from './components/tabnav';
-
+import NewNewsletter from './components/newsletter/newsletterNew';
 
 function main() {
   ReactDOM.render(
@@ -36,6 +35,7 @@ function main() {
             <Route path='/signup' component={Signup}/>
 
             <Route path='/dashboard' component={requireAuth(Dashboard)}/>
+            <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/>
           </Layout>
         </Switch>
       </Router>
